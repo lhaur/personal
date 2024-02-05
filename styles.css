@@ -76,10 +76,7 @@ body {
   font-size: 5rem;
 }
 #projects {
-  height: 100vh;
-
   text-align: center;
-
   padding: 4rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -88,6 +85,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  min-height: 100vh;
 }
 .project-tile {
   background: var(--color3);
@@ -146,5 +144,19 @@ body {
 @media (min-width: 1200px) {
   .project-tiles {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  #navbar ul {
+    width: 100%;
+    float: none;
+    justify-content: center;
+  }
+  #projects {
+    min-height: 100vh;
+  }
+  .project-tiles {
+    grid-template-columns: auto;
   }
 }
