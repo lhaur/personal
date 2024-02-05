@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+:root {
+  --color1: #000000;
+  --color2: #3c0753;
+  --color3: #720455;
+  --color4: #910a67;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+/* NAVBAR */
+#navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  background: var(--color4);
+}
+#navbar ul {
+  list-style-type: none;
+  float: right;
+  display: flex;
+}
+#navbar ul li a {
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 2.25rem;
+  color: white;
+  text-decoration: none;
+}
+#navbar ul li a:hover {
+  color: var(--color4);
+  background: white;
+}
+
+/* WELCOME SECTION */
+#welcome-section {
+  height: 100vh;
+  background: linear-gradient(33deg, var(--color1), var(--color2));
+  text-align: center;
+  color: white;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+#welcome-section h1 {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-size: 7rem;
+  margin-bottom: -10px;
+}
+#welcome-section p {
+  font-family: monospace;
+  font-size: 2.75rem;
+}
+
+/* PROJECTS SECTION */
+.projects-title {
+  text-align: center;
+  font-family: sans-serif;
+  /* border-bottom: 2px dashed var(--color3); */
+  min-width: 20px;
+  max-width: 70%;
+  margin: 2rem auto;
+  padding-bottom: 1rem;
+  font-size: 5rem;
+}
+#projects {
+  text-align: center;
+  padding: 4rem;
+}
+.project-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.project-tile {
+  background: var(--color3);
+  padding: 6rem 3rem;
+  color: white;
+  position: relative;
+  border-bottom-right-radius: 25px;
+}
+.project-desc {
+  margin-bottom: 2rem;
+}
+.project-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 25px;
+  background: var(--color2);
+}
+.project-link:hover {
+  background: white;
+  color: var(--color2);
+  box-shadow: 2px var(--color2);
+}
+
+/* CONTACT */
+#contact {
+  margin: 0 auto;
+  width: 100%;
+  padding: 10rem 3rem;
+  background: var(--color1);
+  color: white;
+}
+.contact-title {
+  font-size: 5rem;
+  text-align: center;
+}
+.social-icons {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+  padding-left: 0;
+  max-width: 100%;
+}
+#profile-link {
+  color: white;
+  font-size: 5rem;
+}
+#profile-link:hover {
+  color: var(--color4);
+}
+@media (min-width: 1200px) {
+  .project-tiles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
