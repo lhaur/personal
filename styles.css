@@ -144,6 +144,10 @@ body {
 @media (min-width: 1200px) {
   .project-tiles {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+  }
+  .project-tile {
+    max-height: 50%;
   }
 }
 
